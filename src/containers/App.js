@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        Github User Search
+        <h1>Github User Search</h1>
         <SearchBar />
       </div>
     );

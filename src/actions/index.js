@@ -1,6 +1,20 @@
-export function testThis() {
+import axios from 'axios';
+
+import { STOREUSERDATA } from '../constants'
+const baseUrl = "https://api.github.com/users"
+
+export function searchUser(userName) {
   return(dispatch) => {
-    console.log("tests")
-    dispatch({ type: "Test", payload: {item: "test1"} })
+    axios({
+      method:"get",
+      url:`${baseUrl}/${userName}`
+    })
+    .then( res => {
+      dispatch({
+        type: STOREUSERDATA,
+        payload: res.data
+      })
+    })
+    .catch( err => { console.log("err", err)} )
   }
 }
