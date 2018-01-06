@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { testThis } from '../actions'
+
+import SearchBar from '../components/Search.Bar'
 
 class App extends Component {
-  testThis = () => {
-    this.props.testThis()
-  }
   render() {
     return (
       <div>
-        Testin
-        <button onClick={this.testThis}>Test</button>
+        Github User Search
+        <SearchBar />
       </div>
     );
   }
 }
 
-export default connect(null, { testThis })(App);
+export default App;
