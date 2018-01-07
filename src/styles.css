@@ -1,0 +1,71 @@
+body { 
+  margin: 0;
+  font-family: sans-serif;
+  /* background: lightGray; */
+}
+
+#App {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome {
+  margin: 50px auto;
+  text-transform: uppercase;
+}
+
+.Search-Bar {
+  display: flex;
+  margin: auto;
+  width: 400px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  
+}
+
+.Search-Bar > * {
+  border: 1px solid gray;
+  padding: 5px 10px;
+  background: inherit;
+}
+
+.Search-Bar input {
+  width: 100%;
+  height: 25px;
+  border-right: none;
+}
+
+.Search-Bar button {
+  text-transform: uppercase;
+}
+
+.User-badge {
+  width: 388px;
+  height: 100px;
+  margin: 20px auto;
+  display: flex;
+  padding: 5px;
+  border: 1px solid lightGray;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.User-badge .avatar {
+  max-height: 100%;
+  width: auto;
+  border-radius: 5px;
+}
+
+.User-badge .user-stats{
+  padding: 5px 10px;
+}
+
+.User-badge .user-stats > * {
+  margin: 0 0 5px;
+}
+
+.User-badge .user-stats .name{
+}
+
+.User-badge .user-stats .username{
+  font-style: italic;
+}

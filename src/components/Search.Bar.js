@@ -18,7 +18,7 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="Search-Bar" onSubmit={this.handleSubmit}>
         <input onChange={this.handleChange} value={this.state.searchInput}/>
         <button>Search</button>
       </form>
