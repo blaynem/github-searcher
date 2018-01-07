@@ -24,7 +24,7 @@ class UserBadge extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    searchData: state.searchData.data
+    searchData: state.searchData.userData
   }
 }
 
