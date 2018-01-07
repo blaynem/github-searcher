@@ -63,9 +63,10 @@ body {
   margin: 0 0 5px;
 }
 
-.User-badge .user-stats .name{
-}
-
 .User-badge .user-stats .username{
   font-style: italic;
+}
+
+.repo-container {
+  
 }
