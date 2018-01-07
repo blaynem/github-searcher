@@ -87,6 +87,12 @@ body {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   margin: 20px;
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.repo-card > * {
+  flex: 100%;
 }
 
 .repo-card p, .repo-container a {
@@ -102,13 +108,20 @@ body {
   margin-bottom: 30px;
 }
 
-.repo-card .description {
-  min-height: 50px;
+.repo-card .description, .repo-card .no-description {
   margin-bottom: 20px;
   font-size: .9rem;
 }
 
+.repo-card .no-description {
+  font-style: italic;
+  min-height: 30px;
+}
+
+.repo-card .icons-div {
+  align-self: flex-end;
+}
 .repo-card .url {
-  display: block;
   margin-bottom: 5px;
+  align-self: flex-end;
 }

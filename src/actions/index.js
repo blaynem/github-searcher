@@ -28,6 +28,7 @@ export function getRepos(userName) {
       url:`${baseUrl}/${userName}/repos`
     })
     .then( res => {
+      console.log("res", res)
       dispatch({
         type: STOREREPODATA,
         payload: res.data

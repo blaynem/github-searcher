@@ -151,7 +151,7 @@ const INITIAL_STATE = {
       },
       private: false,
       html_url: "https://github.com/blaynem/form-builder",
-      description: "Test Description Test Description Test Description Test Description Test Description Test Description Test Description Test Description Test Description Test Description ",
+      description: "Test Description Description Test Description Test Description Test Description Test Description Test Description Test Description ",
       fork: false,
       url: "https://api.github.com/repos/blaynem/form-builder",
       forks_url: "https://api.github.com/repos/blaynem/form-builder/forks",
@@ -225,7 +225,7 @@ export default function searchData(state = INITIAL_STATE, action){
     case STOREUSERDATA:
       return {
         ...state,
-        data: action.payload
+        userData: action.payload
       }
 
     case STOREREPODATA:
