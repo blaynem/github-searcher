@@ -42,7 +42,7 @@ body {
 .User-badge {
   width: 488px;
   height: 100px;
-  margin: 20px auto;
+  margin: 40px auto 20px;
   display: flex;
   padding: 5px;
   border: 1px solid lightGray;
@@ -76,7 +76,7 @@ body {
 .repo-container h2 {
   flex: 100%;
   text-align: center;
-  margin-bottom: 0;
+  margin: 20px 0;
   text-transform: uppercase;
 }
 
@@ -121,9 +121,21 @@ body {
 .repo-card .icons-div {
   align-self: flex-end;
 }
+
 .repo-card .url {
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 0;
   align-self: flex-end;
+  text-decoration: none;
+  color: black;
+}
+
+.repo-card .url:visited {
+  color: rgb(88, 88, 88);
+}
+
+.repo-card .url:hover {
+  color: rgb(50, 61, 97);
 }
 
 .error-message {
