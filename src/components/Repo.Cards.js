@@ -4,11 +4,10 @@ export const RepoCards = ({ data }) => (
   <div className="repo-card">
     <p className="title">{data.name}</p>
     <p className="description">{data.description}</p>
-    <p className="url">{data.url}</p>
-    <span className="stargazers_count">{data.stargazers_count}</span>
-    <span className="size">{data.size}</span>
-    <span className="forks">{data.forks}</span>
-    <span className="open_issues">{data.open_issues}</span>
-    <span className="size">{data.size}</span>
+    <span className="stargazers_count"><i className="fas fa-star" />{data.stargazers_count}</span>
+    <span className="forks"><i className="fas fa-code-branch"/>{data.forks}</span>
+    <span className="open_issues"><i className="fas fa-exclamation-circle"/>{data.open_issues}</span>
+    <span className="size">{data.size}kb</span>
+    <a href={data.html_url} className="url">{data.html_url}</a>
   </div>
 )

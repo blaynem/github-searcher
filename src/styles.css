@@ -19,7 +19,7 @@ body {
 .Search-Bar {
   display: flex;
   margin: auto;
-  width: 400px;
+  width: 500px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .User-badge {
-  width: 388px;
+  width: 488px;
   height: 100px;
   margin: 20px auto;
   display: flex;
@@ -55,18 +55,60 @@ body {
   border-radius: 5px;
 }
 
-.User-badge .user-stats{
+.user-stats {
   padding: 5px 10px;
 }
 
-.User-badge .user-stats > * {
+.user-stats > * {
   margin: 0 0 5px;
 }
 
-.User-badge .user-stats .username{
+.user-stats .username{
   font-style: italic;
 }
 
 .repo-container {
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.repo-container h2 {
+  flex: 100%;
+  text-align: center;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.repo-card {
+  width: 450px;
+  min-height: 100px;
+  border: 1px solid lightgray;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: 20px;
+  padding: 10px;
+}
+
+.repo-card p, .repo-container a {
+  margin: 5px 0 10px;
+}
+
+.repo-card span {
+  margin-right: 20px;
+}
+
+.repo-card .title {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.repo-card .description {
+  min-height: 50px;
+  margin-bottom: 20px;
+  font-size: .9rem;
+}
+
+.repo-card .url {
+  display: block;
+  margin-bottom: 5px;
 }
