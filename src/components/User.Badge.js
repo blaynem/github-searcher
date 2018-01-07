@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 class UserBadge extends Component {
   render() {
     const { searchData } = this.props
-    console.log("props", searchData)
+    // if there is no data, we wont render the icon yet.
+    if ( searchData === null ) return null;
     return (
       <div className="User-badge">
         <img

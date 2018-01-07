@@ -12,6 +12,12 @@ class ReposContainer extends Component {
     )
   }
   render() { 
+    if ( this.props.repoData === null ) return null;
+    if ( this.props.repoData.length < 1 ) return (
+      <div className="repo-container">
+        <h2>No Repositories</h2>
+      </div>
+    )
     return (
       <div className="repo-container">
         <h2>Repositories</h2>
