@@ -1,10 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## React Skeleton
-I find myself reusing this a lot, so here's my basic skeleton. Set up with a basic test so I can just clone and go.
+# Github User Search Application
+Can be viewed [here](http://blaynegithubsearch.surge.sh/).
 
-## What's included in this setup?
-- Redux
-- Redux DevTools
-- Redux Thunk
-- Axios
+## Installation
+In order to install, clone this repo run `yarn` to install all dependencies and then run `yarn start` in order to start the react server.
+
+### What is this?
+Testing API calls and some more redux building.
