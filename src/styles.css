@@ -125,3 +125,10 @@ body {
   margin-bottom: 5px;
   align-self: flex-end;
 }
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+  font-style: italic;
+  text-align: center;
+}

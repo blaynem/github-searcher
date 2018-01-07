@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { STOREUSERDATA, STOREREPODATA } from '../constants'
+import { STOREUSERDATA, STOREREPODATA, SHOWERROR } from '../constants'
 
 const baseUrl = "https://api.github.com/users"
 
@@ -16,7 +16,9 @@ export function searchUser(userName) {
         payload: res.data
       })
     })
-    .catch( err => { console.log("err", err)} )
+    .catch( err => {
+      return dispatch(throwError())
+    })
     dispatch(getRepos(userName))
   }
 }
@@ -28,12 +30,22 @@ export function getRepos(userName) {
       url:`${baseUrl}/${userName}/repos`
     })
     .then( res => {
-      console.log("res", res)
       dispatch({
         type: STOREREPODATA,
         payload: res.data
       })
     })
-    .catch( err => { console.log("err", err)} )
+    .catch( err => {
+      dispatch(throwError())
+    })
+  }
+}
+
+function throwError() {
+  return(dispatch) => {
+    dispatch({
+      type: SHOWERROR,
+      payload: "Looks like there are no users with that name."
+    })
   }
 }

@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 
 class UserBadge extends Component {
   render() {
-    const { searchData } = this.props
+    const { error, searchData } = this.props
     // if there is no data, we wont render the icon yet.
+    if ( error ) return <div className="error-message">{error}</div>
     if ( searchData === null ) return null;
     return (
       <div className="User-badge">
@@ -25,7 +26,8 @@ class UserBadge extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    searchData: state.searchData.userData
+    searchData: state.searchData.userData,
+    error: state.searchData.error
   }
 }
 

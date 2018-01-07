@@ -1,7 +1,8 @@
-import { STOREUSERDATA, STOREREPODATA } from '../constants';
+import { STOREUSERDATA, STOREREPODATA, SHOWERROR } from '../constants';
 
 const INITIAL_STATE = {
   loading: false,
+  error: null,
   userData: null,
   // userData: {
   //   login: "blaynem",
@@ -227,13 +228,23 @@ export default function searchData(state = INITIAL_STATE, action){
     case STOREUSERDATA:
       return {
         ...state,
+        error: null,
         userData: action.payload
       }
 
     case STOREREPODATA:
       return {
         ...state,
+        error: null,
         userRepos: action.payload
+      }
+
+    case SHOWERROR:
+      return {
+        ...state,
+        error: action.payload,
+        userData: null,
+        userRepos: null
       }
     
     default:
